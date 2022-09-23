@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap');
+
+html { /* também tem o :root - que é acima do html (pai de todos) */
+    /* Declaração de variáveis no CSS */
+    --cor1: #473C38;
+    --cor2: #C2B19C;
+    --cor3: #F0F1F0;
+    --cor4: #B2935B;
+    --gray: #666666;
+    --fontPrincipal: 'Roboto', sans-serif;
+    --fontDestaque: 'Playfair Display', serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--fontPrincipal);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fontDestaque);
+    color: var(--cor1);
+    font-weight: 400;
+    line-height: 100%;
+    margin: 0;
+}
+
+h2 {
+    font-size: 48px;
+}
+
+p {
+    line-height: 130%;
+    color: var(--gray);
+}
+
+a {
+    text-decoration: none; /* retira o sublinhado */
+}
+
+/***********Utilitários***********/
+
+.btn {
+    background-color: var(--cor1);
+    color: var(--cor3);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 25px;
+    display: inline-block;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.btn-block {
+    display: block;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: var(--cor4);
+}
+
+.bg-gray {
+    background-color: var(--cor3);
+}
+
+/***********Utilitários***********/
+
+.container {
+    /*width: calc(100% - 30px);*/
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 15px; /**/
+    /* padding-left: 15px !important;
+    padding-right: 15px !important; */
+}
+
+.hero-section {
+    background-color: var(--cor1);
+    padding-top: 30px;
+    padding-bottom: 112px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu a {
+    text-decoration: none; /* retira o sublinhado */
+    color: #fff;
+    font-family: var(--fontDestaque);
+    margin-left: 70px;
+}
+
+.menu a:hover {
+    color: #FFE5B6;
+}
+
+.flex-hero {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 112px;
+}
+
+.content-hero {
+    width: 643px;
+}
+
+.content-hero h1 {
+    color: #fff;
+    font-size: 60px;
+}
+
+.content-hero p {
+    color: #fff;
+    width: 450px;
+}
+
+.content-hero a {
+    background-color: var(--cor2);
+    color: var(--cor1);
+    font-family: var(--fontDestaque);
+    padding: 15px 50px;
+    display: inline-block; /* Comparado com display: inline, a principal diferença é que display: inline-block permite definir uma largura e uma altura no elemento.
+
+    Além disso, com display: inline-block, as margens/preenchimentos superiores e inferiores são respeitados, mas com display: inline eles não.
+    
+    Comparado com display: block, a principal diferença é que display: inline-block não adiciona uma quebra de linha após o elemento, então o elemento pode ficar ao lado de outros elementos.*/
+    transition: 0.5s;
+}
+
+.content-hero a:hover {
+    background-color: var(--cor3);
+    /* padding: 20px 55px; */
+}
+
+.image-hero img {
+    filter: drop-shadow(20px 20px 50px rgba(0, 0, 0, 0.25));
+    transform: rotate(0.93deg);
+}
+
+.presentation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 15px;
+    /* margin-top: 100px;
+    margin-bottom: 100px; */
+}
+
+.content-presentation {
+    width: 643px;
+}
+
+.image-presentation {
+    filter: drop-shadow(20px 20px 50px rgba(0, 0, 0, 0.25));
+}
+
+.cards {
+    padding: 50px 15px; /**/
+}
+
+.cards h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.cards h3 {
+    font-size: 24px;
+}
+
+.flex-cards {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 15px; /**/
+    padding-right: 15px; /**/
+}
+
+.card {
+    width: 356px;
+    background-color: #fff;
+    padding: 38px;
+    box-sizing: border-box; /* 356px width com o padding - só funciona com padding e border */
+    box-shadow: 3px 3px 10px rgba(204, 204, 204, 0.25);
+    border-radius: 5px;
+}
+
+.card img {
+    border-radius: 5px;
+    margin-bottom: 17px;
+}
+
+.comment {
+    padding: 50px 15px; /**/
+    text-align: center;
+}
+
+.txt-comment {
+    font-family: var(--fontDestaque);
+    font-size: 40px;
+    color: var(--cor1);
+    margin: 20px 0;
+}
+
+.news {
+    background-color: var(--cor2);
+    padding: 60px 15px; /**/
+}
+
+.news input[type="text"], .news input[type="email"] { /* seletor atributo - utiliza o atributo da tag para selecionar */
+    width: 450px;
+    height: 30px;
+    border: none;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.news form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer {
+    background-color: var(--cor1);
+    padding: 50px 15px; /**/
+}
+
+.footer .container {
+    display: flex;
+    /* justify-content: space-between; */
+    column-gap: 25px;
+}
+
+/* .card-footer {
+    width: 353px;
+} */
+
+.footer h4 {
+    font-size: 24px;
+    color: white;
+}
+
+.footer p {
+    color: var(--cor3);
+}
+
+@media (max-width: 1200px) {
+    .hero-section {
+        position: relative;
+    }
+    .menu {
+        display: none;
+        width: 100%;
+        height: calc(100% - 130px);
+        /* height: calc(100% - 130px); */
+        background-color: var(--cor4);
+        position: absolute; /* posição em relação ao elemento pai desde que este tenha position, caso contrário será em relação ao body */
+        top: 130px;
+        left: 0;
+        z-index: 1; /* empilhamento de camada */
+        padding: 0 15px;
+        box-sizing: border-box;
+        /* display: flex;
+        flex-direction: column;
+        align-items: flex-start; */
+    }
+    .menu-open {
+        display: block;
+    }
+    .menu a {
+        color: var(--cor1);
+        display: block;
+        margin: 0;
+        padding: 15px 0;
+        border-bottom: 1px solid var(--cor1);
+    }
+    /* .menu a:last-child {
+        border: none;
+    } */
+    .bar {
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        margin-bottom: 3px;
+        border-radius: 5px;
+    }
+    .bar:nth-child(2) {
+        width: 20px;
+    }
+    .bar:last-child {
+        width: 10px;
+    }
+    /* .flex-cards {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 30px;
+    } */
+
+    .flex-cards {
+        flex-wrap: wrap; /* permite a quebra de linha */
+        justify-content: center;
+        gap: 30px;
+    }
+    .news form {
+        flex-direction: column;
+        align-items: flex-start; /* o padrão do align items é stretch - o flex-direction: column; inverteu o eixo. por isso align items e não justify content - pelo fato do padrão ser stretch, ele tenta equiparar a largura (ou altura) dos elementos com a largura do pai (container) */
+        row-gap: 10px;
+    }
+    .news input[type="text"], .news input[type="email"] {
+        width: 100%;
+    }
+}
+
+@media (max-width: 991px) {
+    .content-hero h1 {
+        font-size: 32px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    .image-hero img {
+        width: 264px;
+    }
+    .txt-comment {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-section {
+        padding-bottom: 88px;
+    }
+    .logo img {
+        /* width: 113px; -> ao mexer na altura ou largura de uma imagem, ela redimensiona automaticamente */
+        height: 70px;
+    }
+    .flex-cards {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 30px;
+    }
+    .flex-hero {
+        margin-top: 48px;
+        flex-direction: column;
+        text-align: center;
+        row-gap: 50px;
+    }
+    .content-hero, .content-hero p {
+        width: 100%;
+    }
+    .content-presentation {
+        width: 100%;
+    }
+    .image-presentation {
+        display: none;
+    }
+    .footer .container {
+        flex-direction: column;
+        row-gap: 4px;
+    }
+}
+
+@media (max-width: 375px) {
+    /* .btn-presentation-mobile-center {
+        text-align: center;
+    } */
+    .card, .card img {
+        width: 100%;
+    }
+}
